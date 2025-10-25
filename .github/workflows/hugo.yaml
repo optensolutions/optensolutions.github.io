@@ -79,6 +79,7 @@ jobs:
             hugo-
       - name: Build the site
         run: |
+          cd optensolutions
           hugo \
             --gc \
             --minify \
