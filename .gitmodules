@@ -1,0 +1,4 @@
+[submodule "optensolutions/themes/blowfish"]
+	path = optensolutions/themes/blowfish
+	url = https://github.com/nunocoracao/blowfish.git
+	branch = main
