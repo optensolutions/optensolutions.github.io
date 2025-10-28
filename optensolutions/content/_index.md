@@ -9,11 +9,21 @@ description: "Opt.en Solutions: O poder da otimização energética. Usamos IA e
 ---
 
 <div style="text-align: center;">
-  <img src="logo2.png" style="width: 300px;margin-top: 0px;margin-bottom: 0px;margin-right: 25%;margin-left: 25%;" alt="Logo da Opt.en" class="medium-zoom-image">
+  <img src="/img/logo.jpeg" 
+       style="display: block; 
+              width: 100%; 
+              max-width: 300px; 
+              height: auto; 
+              margin-left: auto; 
+              margin-right: auto;
+              margin-top: 0px; 
+              margin-bottom: 0px;" 
+       alt="Logo da Opt.en Solutions">
 </div>
 
 ## Transformando o Setor Energético com Inteligência
-<div style="text-align: left !important;">
+
+<div style="text-align: left !important">
 
 A **Opt.en Solutions** aplica o poder da **inteligência artificial**, **análise de dados** e **automação** para otimizar recursos no setor energético.
 
