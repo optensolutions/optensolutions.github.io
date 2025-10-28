@@ -9,7 +9,7 @@ description: "Opt.en Solutions: O poder da otimização energética. Usamos IA e
 ---
 
 <div style="text-align: center;">
-  <img src="logo2.jpeg" 
+  <img src="img/logo2.png" 
        style="display: block; 
               width: 100%; 
               max-width: 300px; 
