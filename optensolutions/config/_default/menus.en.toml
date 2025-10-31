@@ -13,12 +13,12 @@
 [[main]]
   name = "Página Inicial"
   pageRef = "/"
-  weight = 10
+  weight = 1
 
 [[main]]
   name = "Sobre"
   pageRef = "sobre"
-  weight = 10
+  weight = 2
 
 
 #[[main]]

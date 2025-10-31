@@ -96,6 +96,9 @@
     integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
   
   
+    
+    <script src="/js/a11y.min.7eeed9f7a6fe7c8aa3b999966484369eb1b5380455116fc15c2b407140f3c2e3b174fc00201797dba34e4d4013213736ae375c9bcf2d7ad1fadb224355d8d54d.js" integrity="sha512-fu7Z96b&#43;fIqjuZmWZIQ2nrG1OARVEW/BXCtAcUDzwuOxdPwAIBeX26NOTUATITc2rjdcm88tetH62yJDVdjVTQ=="></script>
+  
   
   
   
@@ -296,7 +299,7 @@
   
   class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
   aria-label="Sobre"
-  title="Sobre">
+  title="Sobre a Opt.en Solutions">
   
   
     <p class="text-base font-medium">
@@ -313,6 +316,117 @@
     
 
     
+      <div class="flex items-center">
+    <button
+      id="desktop-a11y-toggle"
+      aria-label="Open accessibility panel"
+      aria-expanded="false"
+      type="button"
+      class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+      role="button"
+      aria-pressed="false">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+    </button>
+
+    <div id="desktop-a11y-overlay" class="fixed inset-0 z-500 hidden"></div>
+
+    <div
+      id="desktop-a11y-panel"
+      role="dialog"
+      aria-labelledby="desktop-a11y-panel-title"
+      class="a11y-panel-enter fixed hidden z-500 p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+      style="min-width: 20rem;">
+      <div class="flex items-center justify-between mb-6">
+        <h3
+          id="desktop-a11y-panel-title"
+          class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          Accessibility settings
+        </h3>
+        <button
+          id="desktop-a11y-close"
+          class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Close a11y panel">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-5">
+        
+        
+        
+          
+        
+          <div class="flex items-center justify-between">
+            <label for="desktop-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              Disable blur
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-disable-blur">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-disable-images" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              Disable images
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-disable-images">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              Show link underline
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-underline-links">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              Enable zen mode
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-zen-mode">
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-between">
+          <label
+            for="desktop-font-size-select"
+            class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            Font size
+          </label>
+          <select
+            id="desktop-font-size-select"
+            class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+            
+            
+              <option value="default">default</option>
+            
+              <option value="12px">12px</option>
+            
+              <option value="14px">14px</option>
+            
+              <option value="16px">16px</option>
+            
+              <option value="18px">18px</option>
+            
+              <option value="20px">20px</option>
+            
+              <option value="22px">22px</option>
+            
+              <option value="24px">24px</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
 
     
       <button
@@ -326,6 +440,23 @@
     
 
     
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
   </nav>
 
     
@@ -333,6 +464,117 @@
     <span></span>
 
     
+
+    
+      <div class="flex items-center">
+    <button
+      id="mobile-a11y-toggle"
+      aria-label="Open accessibility panel"
+      aria-expanded="false"
+      type="button"
+      class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+      role="button"
+      aria-pressed="false">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+    </button>
+
+    <div id="mobile-a11y-overlay" class="fixed inset-0 z-500 hidden"></div>
+
+    <div
+      id="mobile-a11y-panel"
+      role="dialog"
+      aria-labelledby="mobile-a11y-panel-title"
+      class="a11y-panel-enter fixed hidden z-500 p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+      style="min-width: 20rem;">
+      <div class="flex items-center justify-between mb-6">
+        <h3
+          id="mobile-a11y-panel-title"
+          class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          Accessibility settings
+        </h3>
+        <button
+          id="mobile-a11y-close"
+          class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Close a11y panel">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-5">
+        
+        
+        
+          
+        
+          <div class="flex items-center justify-between">
+            <label for="mobile-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              Disable blur
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-disable-blur">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-disable-images" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              Disable images
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-disable-images">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              Show link underline
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-underline-links">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              Enable zen mode
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-zen-mode">
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-between">
+          <label
+            for="mobile-font-size-select"
+            class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            Font size
+          </label>
+          <select
+            id="mobile-font-size-select"
+            class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+            
+            
+              <option value="default">default</option>
+            
+              <option value="12px">12px</option>
+            
+              <option value="14px">14px</option>
+            
+              <option value="16px">16px</option>
+            
+              <option value="18px">18px</option>
+            
+              <option value="20px">20px</option>
+            
+              <option value="22px">22px</option>
+            
+              <option value="24px">24px</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
 
     
 
@@ -347,6 +589,21 @@
       </button>
     
 
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
     
   </div>
 
@@ -400,7 +657,7 @@
     
     class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
     aria-label="Sobre"
-    title="Sobre">
+    title="Sobre a Opt.en Solutions">
     
     
       <p class="text-bg font-bg">
